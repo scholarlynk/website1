@@ -24,7 +24,7 @@ allPosts = allPosts.sort((a, b) => new Date(b.data.publishDate).valueOf() - new 
             </h2>
             <p>{post.data.description}</p>
             <div class="post-item-footer">
-              <span class="post-item-date">— {post.data.publishDate}</span>
+              <span class="post-item-date">— {new Date(post.data.publishDate).toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' })}</span>
             </div>
           </div>
         </div>
